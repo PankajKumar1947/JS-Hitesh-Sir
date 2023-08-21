@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+   //setInterval  :->It continously run in the interval of time set in setInterval.
+        // setInterval(function(){
+        //     console.log("Pankaj",Date.now());
+        // },2000)
+        //another method
+        // const printNameDate=function(){
+        //     console.log("Pankaj",Date.now());
+        // }
+        // setInterval(printNameDate,5000)//printNameDate is passed as refernce
+        //passing third argument in the above function
+        const printName=function(str){
+            console.log(str,"Pankaj with paramet",Date.now());
+        }
+        // setInterval(printName,2000,"hi");
+
+    //clearInterval()  :-> It will stop setInterval.
+        // const clear=setInterval(printName,2000,"hi");
+        // clearInterval(clear)
+
+    //Task-1: Apply event listener to start and stop button to start and stop clearInterval() handler
+        //start
+        var clear;
+       document.querySelector("#start").addEventListener("click",function(){
+         console.log("Start button Clicked");
+          clear=setInterval(printName,2000,"HI");
+       })
+       //stop
+       document.querySelector("#stop").addEventListener('click',function(){
+        console.log("Stop button clicked");
+        
+        clearInterval(clear);
+       })
+
+
+    </script>
+</body>
+</html>
