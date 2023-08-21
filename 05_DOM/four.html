@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM| Chai aur Code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="language">
+        <li>Javascript</li>
+    </div>
+</body>
+<script>
+//adding element to the class by the help of a function.
+    //function defination:
+    function addLanguage(langName){
+        const li=document.createElement('li');
+        li.innerHTML=`${langName}`//traverse the whole elements.
+        document.querySelector('.language').appendChild(li);//selecting the language class and  appending a child li in it.
+    }
+    addLanguage("python");//function call to add python
+    addLanguage("typescript");//function call
+    // if the number of elements before appending is greater then to append even a single element require traversing of whole li.
+    //so this method is not optimised.
+
+
+
+//adding element by optimised way.
+    //function defination:
+    function addOptiLanguage(langName){
+        const li=document.createElement('li');
+        // const addText=document.createTextNode(langName);
+        // li.appendChild(addText)
+        li.appendChild(document.createTextNode(langName));//same code of above two lines code.
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage("golang");//function call
+    //here traversing is not occuring to add elements.
+
+
+//Edit element:
+    const secondLang=document.querySelector("li:nth-child(2)");
+    //first approach
+    secondLang.innerHTML="Mojo";//editing python by mojo. It is not optimised way because innerHTML is used here so it will require traversing.
+
+    //second approach
+    const newli=document.createElement('li');
+    newli.textContent="new Mojo";
+    secondLang.replaceWith(newli);//Optimised way.
+
+    //third approach
+    const firstLang=document.querySelector("li:first-child")
+    firstLang.outerHTML='<li>TypeScript</li>'//element can also be changed.
+
+
+//remove element.
+    const lastLang=document.querySelector('li:last-child');
+    lastLang.remove();//removing last language.
+
+
+    console.log("end for today.");
+</script>
+</html>

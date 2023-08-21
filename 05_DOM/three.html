@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM| Chai aur Chode</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    
+</body>
+<script>
+//creating elements.
+    const div=document.createElement('div');//creating div element .
+    console.log(div);//printing div elements.
+    const h1=document.createElement('h1');//creating h1 elemnet.
+    console.log(h1);//printing h1 elements.
+
+//adding properties to elements.
+    div.className="main";//adding className to div variable.
+    //div.id="myId";//adding id to h1 varibale.
+    h1.className="heading";//adding className "heading" to the h1 variabale.
+    h1.id="heading-Id";//adding Id to the h1 variable.
+
+    //div.id=Math.random();//adding random id to div element or variable.
+    div.id=Math.round(Math.random());//randig random rounded id to the div.
+
+    div.setAttribute("title","generated title");//adding attribute : two arguments have to be passed. first is type of attributes. and second is name of attributes.
+
+    div.style.backgroundColor="green";//adding style  to div element.
+
+//adding text to the element.
+    //div.innerText="Chai aur Code";// innerText override the value of div element.
+    //div.innerText="new";//here "Chai aur Code" is override by the new text "new". So we should not use innerText to add text by this method.
+
+    const addText=document.createTextNode("Chai aur code text is created");//creating the text node in addText Variable.
+    div.appendChild(addText);//adding addText variable to div elemnet by appendChild() method but output screen it is not shown because div element is not appended to add div element to the body see the line 38.
+
+    document.body.appendChild(div);//adding div element to the body of the document.
+
+    const addText2=document.createTextNode(" new text");//adding another text to the same elements.
+    div.appendChild(addText2);//here it will not override the previous data. it is safe to use.
+
+
+</script>
+</html>
