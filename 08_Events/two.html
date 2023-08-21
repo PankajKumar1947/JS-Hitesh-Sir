@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+
+    <script>
+    //setTimeout()  :-> It runs only one time after given interval of a time.
+        setTimeout(function(){
+            console.log("Pankaj");
+        },2000)
+
+        //another way of using setTimeout()
+        // const sayPankaj=function(){
+        //     console.log("Pankaj Kumar");
+        // }
+        // setTimeout(sayPankaj,2000);
+
+        //Eg:-changing the text of h1 tag after some time
+        const changeText=function(){
+            document.querySelector("h1").innerHTML="Best Js Course"
+        }
+        
+        
+    //clearTimeout()  :-> Use it when we want to stop before completion of time set in setTimeout() handler.
+        const ChangeMe=setTimeout(changeText,2000);
+        //clearTimeout(ChangeMe);//it will stop from changing the text.
+        //applying it on stop button.
+        document.querySelector('#stop').addEventListener('click',function(){
+            clearTimeout(ChangeMe);
+            console.log("Stopped");
+        })//it will stop changing the inner html if stop button is clicked before completion of time setted in setTimeout
+        
+
+
+    //sectInteval() :-> It runs continuoulsy after a given interval of time
+        // setInterval(function(){
+        //     console.log("Kumar");
+        // },2000)
+    </script>
+</body>
+</html>
