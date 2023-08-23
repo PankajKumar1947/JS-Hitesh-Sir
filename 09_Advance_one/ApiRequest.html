@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+</head>
+<body style="background-color: #a5a4a4;">
+    <h1>AJAX Request</h1>
+    Value	State	Description
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+</body>
+<script>
+    const requestUrl='https://api.github.com/users/PankajKumar1947';//storing requestUrl in a varibale.
+    const xhr = new XMLHttpRequest();//XMLHttpRequest() -> It is a object used to send and receive requests. Here we are using it's method(xhr is also a request but here it is a variable name).
+    console.log(xhr.readyState)//0
+    xhr.open('GET',requestUrl);
+    console.log(xhr.readyState);//1
+    
+    //tracking the state change
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);//2,3,4
+
+        if(xhr.readyState==4){
+            const data=this.responseText;//storing the response of url current in data variable.
+            console.log(data);//printing the stored data.
+
+            //console.log(data.followers);//why giving undefined?->  Because type of response obtained from the url is string type.
+            console.log(typeof(data))//type-> string
+            const jsonData=JSON.parse(data);//converting the type of data from string to object by the help of JSON
+            console.log(typeof(jsonData));//checking type of changed or not? ->yes now it is object
+            console.log(jsonData);//now it is giving response in object format.
+
+            console.log(jsonData.followers);//now it is giving the result.
+            
+        }
+    } 
+    
+    xhr.send()
+
+
+
+</script>
+</html>
