@@ -153,3 +153,10 @@ console.log(id===anotherId);//false.
 -- Refer 05_comparison.js
 -- Also refer 06_dataTypes-summary
 
+
+### Stack and Heap ###
+- Primitive Data types uses Stack Memory.
+- Non Primitive Data types uses Headp Memory.
+
+- Copy of original data is taken for Primitive Data types. But,
+- Reference of original data is taken for Non-Primitive data types.
