@@ -21,6 +21,6 @@ let isLoggedIn =false
 //object
 
 console.log(typeof"hitesh") //output->string
-console.log(typeof(age)) //output->age
+console.log(typeof(age)) //output->int
 console.log(typeof null) // output-> object
 console.log(typeof undefined) //outpur-> undefined

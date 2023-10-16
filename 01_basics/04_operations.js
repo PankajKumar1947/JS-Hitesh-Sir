@@ -5,7 +5,7 @@ let negValue=-value;
 //console.log(2+2);//addtions
 //console.log(2-2);//subtraction
 //console.log(2*2);//multiplication
-//console.log(2**2);//remainder
+//console.log(2**2);//power
 //console.log(2/3);//divisions
 //console.log(2%3);//remainder
 
