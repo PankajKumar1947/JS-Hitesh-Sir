@@ -48,3 +48,28 @@ console.log(newDate.getMonth()+1);//give month
 newDate.toLocaleString('default',{
     weekday: "long"
 })
+
+
+
+//Question: print date,month, day upto 7 days.
+const currentDate=new Date();
+const currentDayNo=currentDate.getDate();// for date number
+const currentDay=currentDate.getDay();// for day name
+const currentMonth=currentDate.getMonth();// for month
+
+const monthName=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const dayName=["Sun","Mon","Teu","Wed","Thu","Fri","Sat"];
+
+for(let i=0;i<7;i++){
+    console.log(currentDayNo+i,dayName[(currentDay+i)%7],monthName[(currentMonth+i)%12])
+}
+
+//Result for above question is:
+//1 Wed Nov
+// 2 Thu Dec
+// 3 Fri Jan
+// 4 Sat Feb
+// 5 Sun Mar
+// 6 Mon Apr
+// 7 Teu May
+
