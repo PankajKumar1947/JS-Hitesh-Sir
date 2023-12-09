@@ -39,12 +39,13 @@
 -- @ Note:
 - typeof(VARIABLE_NAME) or type of VARIABLE_NAME --> it is used to check the type of a variable.
 - eg:
-     age=23
-    -console.log(typeof"hitesh") //output->string
-    -console.log(type of age)// output
-    -console.log(typeof(age)) //output->int
-    -console.log(typeof null) // output-> object
-    -console.log(typeof undefined) //output-> undefined
+    age=23
+    console.log(typeof"hitesh") //output->string
+    console.log(type of age)// output
+    console.log(typeof(age)) //output->int
+    console.log(typeof null) // output-> object
+    console.log(typeof undefined) //output-> undefined
+
 
 --@ Note: Consider an example
 - const id=Symbol('123');
