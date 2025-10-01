@@ -1,7 +1,7 @@
 // Primitive Data types uses Stack Memory.
 //Non Primitive Data types uses Headp Memory.
 
-let myYoutubename="hiteshchaudhary.com"// it is a primitive value it will uses heap.
+let myYoutubename="hiteshchaudhary.com"// it is a primitive value it will uses stack.
 
 let anothername=myYoutubename;// it's also primitive value.
 

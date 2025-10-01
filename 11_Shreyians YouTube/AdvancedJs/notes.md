@@ -244,7 +244,7 @@
 ```
 
 # pure and impure functions
-- Pure function is any function which has therse 2 features:
+- Pure function is any function which has these 2 features:
  1. it should always return same ouput for same input.
  2. it will never change/update the value of a global variable.
 ```javascript
